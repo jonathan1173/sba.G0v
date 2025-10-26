@@ -15,12 +15,12 @@ const GuideCard = ({ guide }) => {
         {guide.description}
       </p>
       
-      <ul className="list-disc list-inside space-y-2 text-blue-700">
+      <ul className="list-disc list-inside space-y-4 text-blue-900">
         {guide.links.map((link, index) => (
           <li key={index}>
             <a
               href={link.url}
-              className="underline hover:text-blue-900 transition-colors"
+              className=" underline hover:text-blue-900 transition-colors"
             >
               {link.text}
             </a>
@@ -114,7 +114,7 @@ const BusinessGuides = () => {
       <h2 className='text-4xl text-blue-900 py-8'>Browse business topics</h2>
 
       <div className=" mx-auto  ">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {guidesData.map((guide) => (
             <GuideCard key={guide.title} guide={guide} />
           ))}

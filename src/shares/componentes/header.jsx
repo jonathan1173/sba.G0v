@@ -25,19 +25,19 @@ const Header = () => {
           <div>
             {/* Navigation links */}
             <nav className="flex items-center space-x-1 text-[18px]">
-              <a href="#" className="text-blue-900 underline">
+              <a href="https://www.sba.gov/partners" className="text-blue-900 underline">
                 For Partners
               </a>
               <span className="text-gray-300">|</span>
-              <a href="#" className="text-blue-800 underline">
+              <a href="https://www.sba.gov/about-sba/sba-newsroom" className="text-blue-800 underline">
                 Newsroom
               </a>
               <span className="text-gray-300">|</span>
-              <a href="#" className="text-blue-800 underline">
+              <a href="https://www.sba.gov/about-sba/organization/contact-sba" className="text-blue-800 underline">
                 Contact us
               </a>
               <span className="text-gray-300">|</span>
-              <a href="#" className="text-blue-800 underline">
+              <a href="https://www.sba.gov/about-sba/information-other-languages" className="text-blue-800 underline">
                 Other languages
               </a>
             </nav>
@@ -48,7 +48,7 @@ const Header = () => {
             <input
               type="text"
               placeholder=""
-              className="w-56 rounded-l-md border border-r-0 border-gray-400 px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-56 border border-r-0 border-black px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="flex items-center justify-center rounded-r-md bg-[#0072c6] p-2 text-white hover:bg-blue-700">
               <svg
