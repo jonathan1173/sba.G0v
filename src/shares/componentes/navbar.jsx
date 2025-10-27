@@ -118,10 +118,14 @@ const AppHeader = () => {
       
       <div className="w-full h-px bg-gray-300 hidden md:block"></div>
 
-      {/* --- Barra de Navegación Principal (Escritorio) --- */}
+      {/* ================================================================
+      | --- INICIO DE CAMBIOS: Barra de Navegación (Escritorio) ---  |
+      ================================================================
+      */}
       <nav
         ref={desktopNavRef}
-        className="relative w-full bg-white text-white hidden md:block"
+        // CAMBIO 1: Fondo blanco, texto oscuro por defecto y borde inferior
+        className="relative w-full bg-white text-gray-900 hidden md:block border-b border-gray-300"
       >
         <div className="container mx-auto">
           <ul className="flex items-center justify-center text-base font-semibold">
@@ -132,19 +136,22 @@ const AppHeader = () => {
                   <button
                     onClick={() => handleDesktopToggle(item.name)}
                     aria-expanded={openDesktopDropdown === item.name}
+                    // CAMBIO 2: Clases actualizadas para tema claro (fondo blanco)
                     className={`flex items-center py-4 px-6 transition-all duration-200 border-t-4 ${
                       openDesktopDropdown === item.name
-                        ? "border-blue-600 bg-[#0072c6]"
-                        : "border-transparent text-black hover:bg-[#002e6d]"
+                        ? "border-blue-600 text-blue-700" // Estado activo: borde y texto azul
+                        : "border-transparent text-gray-900 hover:text-blue-700" // Estado inactivo: texto oscuro, hover azul
                     }`}
                   >
                     {item.name}
-                    <ChevronDown className="ml-1 h-4 w-4 text-white" />
+                    {/* CAMBIO 3: Quitado 'text-white' para que el icono herede el color del botón */}
+                    <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 ) : (
                   <a
                     href="#"
-                    className="flex items-center py-4 px-6 text-white transition-colors duration-200 border-t-4 border-transparent hover:bg-[#002e6d]"
+                    // CAMBIO 4: Clases actualizadas para tema claro
+                    className="flex items-center py-4 px-6 text-gray-900 transition-colors duration-200 border-t-4 border-transparent hover:text-blue-700"
                   >
                     {item.name}
                   </a>
@@ -155,9 +162,9 @@ const AppHeader = () => {
         </div>
 
         {/* --- Contenedor del Menú Desplegable (Escritorio) --- */}
+        {/* (Este no necesita cambios, ya que el dropdown sigue siendo azul oscuro) */}
         {currentDesktopDropdown && (
           <div className="absolute left-0 top-full z-50 w-full bg-[#0c2340] text-white shadow-lg">
-            {/* 2. CORRECCIÓN: Contenido del dropdown ahora solo mapea las columnas */}
             <div className="container mx-auto grid grid-cols-4 gap-x-8 gap-y-10 px-6 py-10">
               {currentDesktopDropdown.dropdownContent.columns.map(
                 (column, index) => (
@@ -180,7 +187,6 @@ const AppHeader = () => {
                       </ul>
                     )}
                     
-                    {/* 2. CORRECCIÓN: Lógica para secondaryTitle RE-AGREGADA */}
                     {column.secondaryTitle && (
                       <>
                         <h3 className="mb-4 mt-6 text-base font-bold text-white">
@@ -209,10 +215,15 @@ const AppHeader = () => {
           </div>
         )}
       </nav>
+      {/* ================================================================
+      | --- FIN DE CAMBIOS: Barra de Navegación (Escritorio) ---     |
+      ================================================================
+      */}
+
 
       {/*
       ================================================================
-      |                    VISTA DE MÓVIL (< `md`)                   |
+      |                 VISTA DE MÓVIL (< `md`)                   |
       ================================================================
       */}
 
@@ -272,7 +283,6 @@ const AppHeader = () => {
                     {openAccordion === item.name && (
                       <div className="bg-white p-4 text-black">
                         
-                        {/* 3. CORRECCIÓN: Mapea las columnas y sus títulos/links */}
                         {item.dropdownContent.columns.map((column, idx) => (
                           <div key={idx} className="mt-4">
                             <h3 className="mb-2 text-base font-bold text-gray-900">
@@ -288,7 +298,6 @@ const AppHeader = () => {
                               </a>
                             ))}
 
-                            {/* 3. CORRECCIÓN: Lógica para secondaryTitle RE-AGREGADA (móvil) */}
                             {column.secondaryTitle && (
                               <>
                                 <h3 className="mb-2 mt-4 text-base font-bold text-gray-900">
