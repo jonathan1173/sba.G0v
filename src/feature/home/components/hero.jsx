@@ -6,13 +6,15 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full h-[80vh] bg-cover bg-center flex items-center"
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      className="relative h-[100vh] bg-cover bg-center flex items-center"
+      style={{
+        backgroundImage: window.innerWidth >= 640 ? `url(${imageUrl})` : "none",
+      }}
     >
       {/* Overlay opcional para oscurecer la imagen si es necesario */}
       {/* <div className="absolute inset-0 bg-black opacity-20"></div> */}
 
-      <div className=" px-4 md:px-8 lg:px-16">
+      <div className=" px-4 md:px-8 lg:px-16 ">
         <div className="relative bg-blue-900 text-white p-8 ">
           <h2 className="text-4xl font-bold leading-tight mb-10">
             Need funding <br /> for your small <br /> business?

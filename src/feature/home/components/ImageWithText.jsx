@@ -16,16 +16,16 @@
               />
             </div>
             {/* Columna del Texto */}
-            <div className="flex w-full flex-col justify-center bg-[#002a54] p-10 text-white md:w-2/3">
-              <h2 className="mb-4 text-4xl font-bold">
+            <div className="flex w-full flex-col justify-center bg-blue-900 py-10 px-6 text-white md:w-2/3">
+              <h2 className="mb-4 text-4xl font-semibold">
                 Make Onshoring Great Again
               </h2>
-              <p className="mb-8 text-lg">
+              <p className="mb-8 text-sx">
                 SBA's onshoring portal helps connect businesses with verified U.S. manufacturers, producers, and suppliers.
               </p>
               <a 
                 href="#" 
-                className="w-fit rounded-md bg-[#0073b7] px-8 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#005a94]"
+                className="w-fit rounded-md bg-[#0073b7] text-center md:text-left px-8 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#005a94]"
               >
                 Find onshoring resources
               </a>

@@ -107,7 +107,7 @@ const BusinessGuides = () => {
   ];
 
   return (
-    <section className="bg-white p-8 md:p-3">
+    <section className="bg-white p-4 md:p-3">
       {/* --- CAMBIO AQUÍ --- 
         Cambié 'max-w-6xl' a 'max-w-7xl' para hacer el contenedor más ancho.
       */}

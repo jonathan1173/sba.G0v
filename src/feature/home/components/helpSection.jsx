@@ -37,7 +37,7 @@ const services = [
 // --- El Componente ---
 function BusinessHelpSection() {
   return (
-    <section className="p-8 font-sans bg-white">
+    <section className="p-4 font-sans bg-white">
       
       {/* Título de la sección */}
       <h2 className="text-4xl font-normal text-blue-900  mb-8">

@@ -3,12 +3,12 @@ import React from "react";
 // Un componente reutilizable para cada tarjeta
 const Card = ({ title, description, buttonText, buttonLink = "#" }) => {
   return (
-    <div className="flex h-full flex-col rounded-lg border-2 border-gray-300   bg-white p-8 shadow-sm">
-      <h3 className="text-2xl font-semibold text-[#002a54]">{title}</h3>
-      <p className="mt-4 text-gray-600">{description}</p>
+    <div className="flex h-full flex-col rounded-lg border-2 border-gray-300   bg-white p-6 shadow-sm">
+      <h3 className="text-xl md:text-2xl font-semibold text-[#002a54]">{title}</h3>
+      <p className="mt-4 text-black">{description}</p>
       <a
         href={buttonLink}
-        className="mt-auto block w-full rounded-md bg-[#0073b7] px-6 py-3 text-center font-semibold text-white transition-colors duration-300 hover:bg-[#005a94]"
+        className="mt-8 md:mt-auto block w-full rounded-md bg-[#0073b7] px-6 py-2 text-center font-semibold text-white transition-colors duration-300 hover:bg-[#005a94]"
       >
         {buttonText}
       </a>
@@ -39,9 +39,9 @@ const CtaCards = () => {
   ];
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
             <Card
               key={index}

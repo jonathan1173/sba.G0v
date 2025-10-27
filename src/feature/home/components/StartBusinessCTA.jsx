@@ -2,10 +2,10 @@ import React from 'react';
 
 function StartBusinessCTA() {
   return (
-    <section className="bg-blue-900 text-white font-sans py-16 px-8 md:px-12 lg:px-16">
+    <section className="bg-blue-900 flex flex-col justify-center  text-white font-sans mx-3 py-16 px-8 md:px-12 lg:px-16">
       
       {/* Título Principal */}
-      <h2 className="text-4xl font-bold mb-4">
+      <h2 className="text-4xl font-semibold mb-4">
         Start and grow your business
       </h2>
       

@@ -13,14 +13,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="pt-4 px-4">
-      <CtaCards />
-      <ImageWithText />
-      <CodeModalSection />
-
-      <BusinessGuides />
-      <BusinessHelpSection />
-      <StartBusinessCTA />
+      <div className="p-1 md:p-4">
+        <CtaCards />
+        <ImageWithText />
+        <CodeModalSection />
+        <BusinessGuides />
+        <BusinessHelpSection />
+        
+        <StartBusinessCTA /> 
+      
       </div>
       <Footer/>
       <FooterBar/>
