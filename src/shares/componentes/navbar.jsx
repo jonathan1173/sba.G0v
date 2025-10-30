@@ -126,15 +126,15 @@ const AppHeader = () => {
   ref={desktopNavRef}
   className="relative w-full bg-white text-gray-900 hidden md:block border-b border-gray-300"
 >
-  <div className="container mx-auto">
-    <ul className="flex items-center justify-center font-semibold w-full">
+  <div className="container">
+    <ul className="flex items-center justify-items-start font-semibold w-full">
       {navItems.map((item) => (
         <li key={item.name} className="p-0 m-0">
           {item.hasDropdown ? (
             <button
               onClick={() => handleDesktopToggle(item.name)}
               aria-expanded={openDesktopDropdown === item.name}
-              className={`flex items-center justify-center h-12 px-5 whitespace-nowrap transition-all  border-2 ${
+              className={`flex items-center  h-12 px-5 whitespace-nowrap transition-all  border-2 ${
                 openDesktopDropdown === item.name
                   ? "border-blue-600 text-blue-700"
                   : "border-transparent text-gray-900 hover:text-blue-700 hover:border-blue-600"

@@ -297,7 +297,7 @@ export const navItems = [
           ],
           secondaryTitle: "Organization",
           secondaryLinks: [
-            { name: "SBA leadership", href: "#" },
+            { name: "SBA leadership", href: "./about-sba" },
             { name: "Contact SBA", href: "#" },
             { name: "Forms and documents", href: "#" },
             { name: "Observances", href: "#" },
