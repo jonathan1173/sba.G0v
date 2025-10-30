@@ -122,99 +122,87 @@ const AppHeader = () => {
       | --- INICIO DE CAMBIOS: Barra de Navegación (Escritorio) ---  |
       ================================================================
       */}
-      <nav
-        ref={desktopNavRef}
-        // CAMBIO 1: Fondo blanco, texto oscuro por defecto y borde inferior
-        className="relative w-full bg-white text-gray-900 hidden md:block border-b border-gray-300"
-      >
-        <div className="container mx-auto">
-          <ul className="flex items-center justify-center text-base font-semibold">
-            {navItems.map((item) => (
-              <li key={item.name} className="flex">
-                  
-                {item.hasDropdown ? (
-                  <button
-                    onClick={() => handleDesktopToggle(item.name)}
-                    aria-expanded={openDesktopDropdown === item.name}
-                    // CAMBIO 2: Clases actualizadas para tema claro (fondo blanco)
-                    className={`flex items-center py-4 px-6 transition-all duration-200 border-t-4 ${
-                      openDesktopDropdown === item.name
-                        ? "border-blue-600 text-blue-700" // Estado activo: borde y texto azul
-                        : "border-transparent text-gray-900 hover:text-blue-700" // Estado inactivo: texto oscuro, hover azul
-                    }`}
-                  >
-                    {item.name}
-                    {/* CAMBIO 3: Quitado 'text-white' para que el icono herede el color del botón */}
-                    <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                ) : (
-                  <a
-                    href="#"
-                    // CAMBIO 4: Clases actualizadas para tema claro
-                    className="flex items-center py-4 px-6 text-gray-900 transition-colors duration-200 border-t-4 border-transparent hover:text-blue-700"
-                  >
-                    {item.name}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+<nav
+  ref={desktopNavRef}
+  className="relative w-full bg-white text-gray-900 hidden md:block border-b border-gray-300"
+>
+  <div className="container mx-auto">
+    <ul className="flex items-center justify-center font-semibold w-full">
+      {navItems.map((item) => (
+        <li key={item.name} className="p-0 m-0">
+          {item.hasDropdown ? (
+            <button
+              onClick={() => handleDesktopToggle(item.name)}
+              aria-expanded={openDesktopDropdown === item.name}
+              className={`flex items-center justify-center h-12 px-5 whitespace-nowrap transition-all  border-2 ${
+                openDesktopDropdown === item.name
+                  ? "border-blue-600 text-blue-700"
+                  : "border-transparent text-gray-900 hover:text-blue-700 hover:border-blue-600"
+              }`}
+            >
+              {item.name}
+            </button>
+          ) : (
+            <a
+              href="#"
+              className="flex items-center justify-center h-12 px-5 whitespace-nowrap text-gray-900 transition-colors  border-b-2 border-transparent hover:text-blue-700 hover:border-blue-600"
+            >
+              {item.name}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
 
-        {/* --- Contenedor del Menú Desplegable (Escritorio) --- */}
-        {/* (Este no necesita cambios, ya que el dropdown sigue siendo azul oscuro) */}
-        {currentDesktopDropdown && (
-          <div className="absolute left-0 top-full z-50 w-full bg-[#0c2340] text-white shadow-lg">
-            <div className="container mx-auto grid grid-cols-4 gap-x-8 gap-y-10 px-6 py-10">
-              {currentDesktopDropdown.dropdownContent.columns.map(
-                (column, index) => (
-                  <div key={column.title || index}>
-                    <h3 className="mb-4 text-base font-bold text-white">
-                      {column.title}
-                    </h3>
-                    {column.links && column.links.length > 0 && (
-                      <ul className="space-y-3">
-                        {column.links.map((link) => (
-                          <li key={link.name}>
-                            <a
-                              href={link.href}
-                              className="text-sm text-gray-200 transition-colors duration-200 hover:text-white hover:underline"
-                            >
-                              {link.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    
-                    {column.secondaryTitle && (
-                      <>
-                        <h3 className="mb-4 mt-6 text-base font-bold text-white">
-                          {column.secondaryTitle}
-                        </h3>
-                        {column.secondaryLinks && column.secondaryLinks.length > 0 && (
-                          <ul className="space-y-3">
-                            {column.secondaryLinks.map((link) => (
-                              <li key={link.name}>
-                                <a
-                                  href={link.href}
-                                  className="text-sm text-gray-200 transition-colors duration-200 hover:text-white hover:underline"
-                                >
-                                  {link.name}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </>
-                    )}
-                  </div>
-                )
-              )}
-            </div>
+  {currentDesktopDropdown && (
+    <div className="absolute left-0 top-full z-50 w-full bg-[#0c2340] text-white shadow-lg">
+      <div className="container mx-auto grid grid-cols-4 gap-x-8 gap-y-10 px-6 py-10">
+        {currentDesktopDropdown.dropdownContent.columns.map((column, index) => (
+          <div key={column.title || index}>
+            <h3 className="mb-4 text-base font-bold text-white">{column.title}</h3>
+            {column.links && (
+              <ul className="space-y-3">
+                {column.links.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-gray-200 transition-colors  hover:text-white hover:underline"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {column.secondaryTitle && (
+              <>
+                <h3 className="mb-4 mt-6 text-base font-bold text-white">
+                  {column.secondaryTitle}
+                </h3>
+                {column.secondaryLinks && (
+                  <ul className="space-y-3">
+                    {column.secondaryLinks.map((link) => (
+                      <li key={link.name}>
+                        <a
+                          href={link.href}
+                          className="text-sm text-gray-200 transition-colors duration-200 hover:text-white hover:underline"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            )}
           </div>
-        )}
-      </nav>
+        ))}
+      </div>
+    </div>
+  )}
+</nav>
+
       {/* ================================================================
       | --- FIN DE CAMBIOS: Barra de Navegación (Escritorio) ---     |
       ================================================================
