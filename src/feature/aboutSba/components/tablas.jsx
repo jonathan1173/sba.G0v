@@ -2,6 +2,7 @@ import Representantes from "./Representantes";
 
 export default function Tablas() {
   const headquarters = [
+     ["Edwin García", "(202) 506 9776", "Office of the Administrator"],
     ["Kelly Loeffler", "SBA Administrator", "Office of the Administrator"],
     ["William (Bill) Briggs", "Deputy Administrator", "Office of the Administrator"],
     ["Wesley Coopersmith", "Chief of Staff", "Office of the Administrator"],
@@ -77,7 +78,7 @@ export default function Tablas() {
         section.
       </p>
       
-      <Representantes />
+      {/* <Representantes /> */}
 
       {/* ===================== TABLA 1 ===================== */}
       <h2 className="text-4xl font-bold mb-6 text-blue-800">SBA Headquarters</h2>
