@@ -1,3 +1,5 @@
+import Representantes from "./Representantes";
+
 export default function Tablas() {
   const headquarters = [
     ["Kelly Loeffler", "SBA Administrator", "Office of the Administrator"],
@@ -74,6 +76,8 @@ export default function Tablas() {
         small businesses succeed. Meet just a few of our leaders in this
         section.
       </p>
+      
+      <Representantes />
 
       {/* ===================== TABLA 1 ===================== */}
       <h2 className="text-4xl font-bold mb-6 text-blue-800">SBA Headquarters</h2>
