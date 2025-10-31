@@ -5,7 +5,7 @@ export default function Representantes() {
 
   return (
     <section className="max-w-4xl mx-auto  py-12 font-sans text-blue-900">
-      <h2 className="text-3xl font-bold mb-6 text-blue-800">Representantes</h2>
+      <h2 className="text-3xl font-bold mb-6 text-blue-800">Representatives</h2>
 
       {/* Desktop/Tableta (tabla) */}
       <div className="overflow-x-auto border border-gray-300 hidden md:block">
