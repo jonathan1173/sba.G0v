@@ -1,19 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="w-full">
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center mb-4 md:mb-0">
-          <img
-            src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
-            alt="SBA U.S. Small Business Administration"
-            className="h-16 mr-4"
-          />
-          <p className="text-[16px] text-blue-900">
-            U.S. Small Business <br /> administration <br /> Grants Department
-          </p>
-        </div>
+          <div className="mb-4 md:mb-0">
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
+                alt="SBA U.S. Small Business Administration"
+                className="h-16 mr-4"
+              />
+              <p className="text-[16px] text-blue-900">
+                U.S. Small Business <br /> administration <br /> Grants Department
+              </p>
+            </Link>
+          </div>
+          
 
         <div className="flex flex-col items-end space-y-3">
           {/* btn cambio de idioma */}

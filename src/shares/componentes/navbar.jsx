@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   ChevronDown,
   Menu,
@@ -72,17 +73,19 @@ const AppHeader = () => {
       <div className="container mx-auto px-4 py-4 hidden md:flex flex-row items-center justify-between">
         {/* Logo y texto */}
         <div className="flex items-center">
-          <img
-            src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
-            alt="SBA Logo"
-            className="h-16 mr-3"
-          />
-          <p
-            className="text-[16px] text-[#002e6d]"
-            style={{ lineHeight: "1.25rem" }}
-          >
-            U.S. Small Business <br /> Administration
-          </p>
+          <Link to="/" className="flex items-center">
+            <img
+              src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
+              alt="SBA Logo"
+              className="h-16 mr-3"
+            />
+            <p
+              className="text-[16px] text-[#002e6d]"
+              style={{ lineHeight: "1.25rem" }}
+            >
+              U.S. Small Business <br /> Administration
+            </p>
+          </Link>
         </div>
 
         {/* Enlaces y búsqueda a la derecha */}
@@ -217,11 +220,13 @@ const AppHeader = () => {
 
       {/* --- Encabezado Móvil --- */}
       <div className="container mx-auto px-4 py-3 flex md:hidden items-center justify-between border-b border-gray-300">
-        <img
-          src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
-          alt="SBA Logo"
-          className="h-12"
-        />
+        <Link to="/" className="flex items-center">
+          <img
+            src="https://www.sba.gov/themes/custom/sba/dist/img/logo-icon.svg"
+            alt="SBA Logo"
+            className="h-12"
+          />
+        </Link>
         <div className="flex items-center space-x-3">
           <button className="rounded-md bg-[#0072c6] px-4 py-1 text-base font-bold text-white hover:bg-blue-900">
             Español

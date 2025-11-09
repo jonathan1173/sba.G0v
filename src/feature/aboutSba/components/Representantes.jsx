@@ -9,15 +9,8 @@ export default function NaturalDisasters() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-12 font-sans">
-      <p className="text-lg leading-7 mb-10 max-w-3xl">
-        Our team is dedicated to supporting communities affected by natural disasters and floods. 
-        We coordinate response efforts, provide recovery resources, and ensure that assistance 
-        reaches those who need it most. Meet some of our leaders working across the nation to 
-        keep communities safe and resilient.
-      </p>
-
       <h2 className="text-4xl font-bold mb-6 text-blue-800">
-        Natural Disasters and Floods
+        Natural Disasters 
       </h2>
 
       {/* Desktop/Tableta (tabla) */}
