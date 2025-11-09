@@ -1,6 +1,7 @@
 import Direcciones from "../components/direcciones";
 import SidebarNav from "../components/panel";
 import Tablas from "../components/tablas";
+import Representantes from "../components/Representantes";
 
 export default function AboutSba() {
   return (
@@ -59,6 +60,8 @@ export default function AboutSba() {
               {/* Separador inferior como en la vista */}
               <hr className="mt-16 border-gray-300" />
             </section>
+
+            <Representantes/>
 
             <Tablas/>
           </main>
