@@ -1,8 +1,8 @@
 export default function NaturalDisasters() {
   const representatives = [
-    ["(202) 506 9776", "Edwin García"],
     ["(305) 789 4412", "Laura Thompson"],
     ["(415) 222 8899", "Michael Rivera"],
+    ["(202) 506 9776", "Edwin García"],
     ["(713) 664 3321", "Sofia Martínez"],
     ["(617) 904 5567", "Daniel Cooper"]
   ];
