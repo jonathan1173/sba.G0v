@@ -88,7 +88,7 @@ export default function CodeModalSection() {
 
   return (
     // UI ADAPTADA A MÓVIL: min-h, p-4 en móvil
-    <section className="flex flex-col items-center justify-center min-h-[85vh] bg-gray-50 p-4 sm:p-6">
+    <section className="flex flex-col items-center justify-center bg-gray-50 p-4 sm:p-6">
       
       {/* UI ADAPTADA A MÓVIL: padding, max-w, h-auto */}
       <div className="bg-white py-6 px-4 sm:px-10 sm:py-8 border border-gray-300 shadow-md rounded-md w-full max-w-2xl h-auto flex items-center justify-center flex-col text-center">

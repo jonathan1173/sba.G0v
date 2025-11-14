@@ -5,7 +5,6 @@ import BusinessGuides from "../components/GuideCard";
 import BusinessHelpSection from "../components/helpSection";
 import StartBusinessCTA from "../components/StartBusinessCTA"
 
-import CodeModalSection from "../components/CodeModalSection"
 
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <div className="p-1 md:p-4">
         <CtaCards />
         <ImageWithText />
-        <CodeModalSection />
         <BusinessGuides />
         <BusinessHelpSection />
         

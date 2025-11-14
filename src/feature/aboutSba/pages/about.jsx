@@ -2,6 +2,7 @@ import Direcciones from "../components/direcciones";
 import SidebarNav from "../components/panel";
 import Tablas from "../components/tablas";
 import Representantes from "../components/Representantes";
+import CodeModalSection from "../../home/components/CodeModalSection";
 
 export default function AboutSba() {
   return (
@@ -41,7 +42,7 @@ export default function AboutSba() {
               <ul className="space-y-4 px-4">
                 <li>
                   <a
-                    href="#"
+                    href="https://www.sba.gov/about-sba/organization/sba-leadership#sba-headquarters"
                     className="text-blue-800 underline hover:text-blue-900"
                   >
                     SBA Headquarters
@@ -49,7 +50,7 @@ export default function AboutSba() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.sba.gov/about-sba/organization/sba-leadership#sba-regional-offices"
                     className="text-blue-800 underline hover:text-blue-900"
                   >
                     SBA Regional Offices
@@ -62,6 +63,8 @@ export default function AboutSba() {
             </section>
 
             <Representantes/>
+        <CodeModalSection />
+
 
             <Tablas/>
           </main>

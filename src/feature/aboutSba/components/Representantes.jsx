@@ -10,7 +10,7 @@ export default function NaturalDisasters() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-12 font-sans">
       <h2 className="text-4xl font-bold mb-6 text-blue-800">
-        Natural desastre and floods
+       Natural disaster and floods
       </h2>
 
       {/* Desktop/Tableta (tabla) */}
