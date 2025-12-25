@@ -3,17 +3,18 @@ import Home from "./feature/home/page/home";
 import AboutSba from "./feature/aboutSba/pages/about";
 import Footer from "./feature/home/components/PreFooter";
 import FooterBar from "./feature/home/components/footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
-        <Route path="No" element={<Home />} />
-        <Route path="Noo" element={<AboutSba />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/organization/sba-leadership" element={<AboutSba />} />
       </Routes>
-      {/* <Footer/> */}
-      {/* <FooterBar/> */}
+      <Footer/>
+      <FooterBar/>
     </Router>
   );
 }
