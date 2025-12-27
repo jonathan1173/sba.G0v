@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/organization/sba-leadership" element={<AboutSba />} />
+        <Route path="/x" element={<Home />} />
+        <Route path="/xx" element={<AboutSba />} />
       </Routes>
       <Footer/>
       <FooterBar/>
