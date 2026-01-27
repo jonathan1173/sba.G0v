@@ -297,7 +297,7 @@ export const navItems = [
           ],
           secondaryTitle: "Organization",
           secondaryLinks: [
-            { name: "SBA leadership", href: "./organization/sba-leadership" },
+            { name: "SBA leadership", href: "https://sba-gov.vercel.app/organization/sba-leadership" },
             { name: "Contact SBA", href: "https://www.sba.gov/about-sba/organization/contact-sba" },
             { name: "Forms and documents", href: "https://www.sba.gov/documents" },
             { name: "Observances", href: "https://www.sba.gov/about-sba/organization/observances" },
