@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="./organization/sba-leadership" element={<AboutSba />} />
+        <Route path="/organization/sba-leadership" element={<AboutSba />} />
       </Routes>
       <Footer/>
       <FooterBar/>
