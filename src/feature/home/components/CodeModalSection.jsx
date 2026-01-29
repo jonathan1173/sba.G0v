@@ -188,6 +188,7 @@ export default function CodeModalSection() {
                 inputMode="numeric"
                 maxLength="1"
                 value={val}
+                autoComplete="off"
                 onChange={(e) => handleChange(e.target.value, index)}
                 className="w-11 h-14 sm:w-12 sm:h-16 text-center text-xl sm:text-2xl font-bold border-2 border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-transparent bg-white text-blue-900 transition-all hover:border-blue-400"
               />
